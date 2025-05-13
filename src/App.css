@@ -1,0 +1,62 @@
+/* Reset padrão */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body, html, #root {
+  height: 100%;
+  width: 100%;
+  font-family: Arial, sans-serif;
+  background-color: #1f2128;
+}
+
+/* Container principal centralizado */
+.google-clone {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Logo do Google */
+.logo {
+  width: 272px;
+  height: auto;
+  margin-bottom: 30px;
+}
+
+/* Campo de busca */
+.search-box {
+  width: 500px;
+  height: 40px;
+  font-size: 16px;
+  padding: 0 15px;
+  border: 1px solid #3f424a;
+  border-radius: 24px;
+  outline: none;
+  color: black;
+  background-color: #3f424a;
+}
+
+/* Botões */
+.buttons {
+  margin-top: 30px;
+}
+
+.buttons button {
+  margin: 5px;
+  padding: 10px 20px;
+  background-color: #3f424a;
+  border: 1px solid #3f424a;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.buttons button:hover {
+  border: 1px solid #dadce0;
+}
