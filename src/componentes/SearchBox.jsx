@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
-import './App.css';
+import GoogleLogo from './GoogleLogo';
+import InputBox from './InputBox';
+import Buttons from './Buttons';
+import Message from './Message';
+import './SearchBox.css';
 
-function SearchBox() {
+const SearchBox = () => {
   const [inputValue, setInputValue] = useState('');
   const [message, setMessage] = useState('');
 
@@ -44,26 +48,14 @@ function SearchBox() {
   };
 
   return (
-    <div className="search-container">
     
-
-      <div className="search-box">
-        <input
-          type="text"
-          placeholder="Pesquise por um post"
-          value={inputValue}
-          onChange={(e) => setInputValue(e.target.value)}
-        />
-      </div>
-
-      {message && <div className="search-message">{message}</div>}
-
-      <div className="buttons">
-        <button onClick={handleSearchGoogle}>Pesquisa Google</button>
-        <button onClick={handleLuckySearch}>Estou com sorte</button>
-      </div>
+    <div className="search-container">
+      <GoogleLogo />
+      <InputBox value={inputValue} onChange={(e) => setInputValue(e.target.value)} />
+      <Message text={message} />
+      <Buttons onSearch={handleSearchGoogle} onLucky={handleLuckySearch} />
     </div>
   );
-}
+};
 
 export default SearchBox;
